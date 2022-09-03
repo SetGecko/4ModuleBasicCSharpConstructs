@@ -4,16 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _4._2Cycles
+namespace _4._2._3CyclesDoWhile
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            for (int i = 1; i < 5; i++)
+            Console.WriteLine("Здесь могла быть ваша реклама :)");
+            Console.WriteLine("Цикл Do While");
+            int i = 0;
+
+            do
             {
-                Console.WriteLine("Цикл {0}", i);
-                Console.WriteLine("Введите любимый цвет на английском с маленькой буквы: ");
+                Console.WriteLine("Проход {0}", i);
+                Console.WriteLine("Введите ваш любимый цвет английскими строковыми буквами: ");
                 switch (Console.ReadLine())
                 {
                     case "red":
@@ -22,7 +26,7 @@ namespace _4._2Cycles
                         Console.WriteLine("Ваш цвет Красный!");
                         break;
                     case "green":
-                        Console.BackgroundColor = ConsoleColor.Green; 
+                        Console.BackgroundColor = ConsoleColor.Green;
                         Console.ForegroundColor = ConsoleColor.Black;
                         Console.WriteLine("Ваш цвет Зелёный!");
                         break;
@@ -36,10 +40,10 @@ namespace _4._2Cycles
                         Console.ForegroundColor = ConsoleColor.Black;
                         Console.WriteLine("Ваш цвет Жёлтый!");
                         break;
-
                 }
-            }
-            
+                i++;
+            } while (i < 5);
+
             Console.ReadKey();
         }
     }
